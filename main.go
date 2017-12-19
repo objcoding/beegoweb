@@ -6,8 +6,9 @@ import (
 )
 
 func main()  {
+	beego.SetStaticPath("/view", "static")
 	beego.Router("/", &beegoweb.WebController{})
-	beego.SetStaticPath("/views", "views")
+
 	beego.Run()
 }
 
